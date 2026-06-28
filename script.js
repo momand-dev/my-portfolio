@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const typingTexts = [
         "Software Engineer",
         "AI Integration Developer", 
-        "Flutter & Laravel Expert",
+        "React Native & Laravel Expert",
         "Web & Mobile Developer",
         "Prompt Engineer",
         "Graphics Designer"
@@ -195,7 +195,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     if (text) {
                         const textContent = text.textContent;
                         if (textContent.includes('Web')) bar.style.width = '90%';
-                        else if (textContent.includes('Flutter')) bar.style.width = '88%';
+                        else if (textContent.includes('React Native')) bar.style.width = '88%';
                         else if (textContent.includes('Laravel')) bar.style.width = '85%';
                         else if (textContent.includes('IT Support')) bar.style.width = '92%';
                         else if (textContent.includes('Word')) bar.style.width = '95%';
@@ -297,7 +297,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // ========== FLOATING ICONS SETUP ==========
     const floatIcons = document.querySelectorAll('.float-icon');
     const iconList = [
-        'fab fa-flutter', 'fab fa-laravel', 'fas fa-brain', 
+        'fab fa-react', 'fab fa-laravel', 'fas fa-brain', 
         'fas fa-code', 'fab fa-react', 'fas fa-database'
     ];
     
@@ -350,8 +350,47 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', animateStats);
     window.addEventListener('load', animateStats);
 
+    // ========== WHATSAPP CLICK HANDLER ==========
+    const whatsappCards = document.querySelectorAll('.contact-card .fa-whatsapp');
+    whatsappCards.forEach(card => {
+        const parent = card.closest('.contact-card');
+        if (parent) {
+            parent.style.cursor = 'pointer';
+            parent.addEventListener('click', () => {
+                const phoneNumber = '+93794206060';
+                window.open(`https://wa.me/${phoneNumber}`, '_blank');
+            });
+        }
+    });
+
+    // ========== PHONE CLICK HANDLER ==========
+    const phoneCards = document.querySelectorAll('.contact-card .fa-phone');
+    phoneCards.forEach(card => {
+        const parent = card.closest('.contact-card');
+        if (parent) {
+            parent.style.cursor = 'pointer';
+            parent.addEventListener('click', () => {
+                const phoneNumber = '+93764026060';
+                window.location.href = `tel:${phoneNumber}`;
+            });
+        }
+    });
+
+    // ========== EMAIL CLICK HANDLER ==========
+    const emailCards = document.querySelectorAll('.contact-card .fa-envelope');
+    emailCards.forEach(card => {
+        const parent = card.closest('.contact-card');
+        if (parent) {
+            parent.style.cursor = 'pointer';
+            parent.addEventListener('click', () => {
+                window.location.href = 'mailto:momand.mohammad@outlook.com';
+            });
+        }
+    });
+
     console.log('%c🚀 Ultra Premium Portfolio Loaded Successfully!', 'color: #3b82f6; font-size: 14px; font-weight: bold;');
     console.log('%c✨ Glassmorphism | Morphing Profile | 6 Floating Icons | All Features Active', 'color: #8b5cf6; font-size: 12px;');
+    console.log('%c📱 React Native | Laravel | AI Integration', 'color: #06b6d4; font-size: 12px;');
 });
 
 // ========== PRELOADER REMOVE ==========
